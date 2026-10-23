@@ -337,13 +337,13 @@ kbd{font:700 12px/1 var(--font-ui);padding:2px 6px;border:1px solid var(--wood-4
       <h1 class="neon-logo" id="logoTitle">Dart Vader</h1>
       <p class="menu-tag">Köşedeki sandalye, soğuk bir içecek ve yepyeni numaralarla dolu eski bir dart tahtası.</p>
       <nav class="planks" id="menuMain" aria-label="Ana menü">
-        <button class="plank primary" id="btnPlay" type="button">PLAY</button>
-        <button class="plank" id="btnSettings" type="button">SETTINGS</button>
-        <button class="plank" id="btnCredits" type="button">CREDITS</button>
+        <button class="plank primary" id="btnPlay" type="button">OYNA</button>
+        <button class="plank" id="btnSettings" type="button">AYARLAR</button>
+        <button class="plank" id="btnCredits" type="button">YAPIMCILAR</button>
       </nav>
       <nav class="planks" id="menuPlay" aria-label="Oyun modu" hidden>
         <button class="plank primary" id="btnStandard" type="button">Standart<small>10 dart · 10 m'den başlar · rekor <b id="menuRecord">0</b></small></button>
-        <button class="plank" id="btnChallenge" type="button">Challenge<small>10 level · <b id="menuStars">0/30</b> yıldız</small></button>
+        <button class="plank" id="btnChallenge" type="button">Meydan Okuma<small>10 seviye · <b id="menuStars">0/30</b> yıldız</small></button>
         <div class="menu-links">
           <button class="back-btn" id="btnPlayBack" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>Geri</button>
           <button class="link-btn" id="btnHowTo" type="button">Nasıl oynanır?</button>
@@ -359,8 +359,8 @@ kbd{font:700 12px/1 var(--font-ui);padding:2px 6px;border:1px solid var(--wood-4
         <button class="back-btn" id="btnLevelsBack" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>Menü</button>
         <span class="panel-note" id="levelsStars"></span>
       </div>
-      <h2 id="levelsTitle">Challenge</h2>
-      <p class="panel-note">Hedefe ulaşırsan 1 yıldız, hedefin 1,25 katına 2, 1,5 katına 3 yıldız. Sonraki level en az 1 yıldızla açılır.</p>
+      <h2 id="levelsTitle">Meydan Okuma</h2>
+      <p class="panel-note">Hedefe ulaşırsan 1 yıldız, hedefin 1,25 katına 2, 1,5 katına 3 yıldız. Sonraki seviye en az 1 yıldızla açılır.</p>
       <ol class="level-grid" id="levelGrid"></ol>
     </div>
   </section>
@@ -408,7 +408,7 @@ kbd{font:700 12px/1 var(--font-ui);padding:2px 6px;border:1px solid var(--wood-4
         <div><dt>Dart özellikleri (sağ alt)</dt><dd><b>Dev</b>: dart büyür, vurduğun dilim ve iki komşusundan en yükseği sayılır. <b>Buz</b>: kaydırıcılar yarı hızda. <b>Ateş</b>: iki komşu dilimin puanı da eklenir. <b>Altın</b>: atışın puanı ikiye katlanır. Her atışta bir özellik seçebilirsin.</dd></div>
         <div><dt>Tahtadaki eklentiler</dt><dd><b>×2</b> ve <b>×3</b> halkaları puanı katlar. <b>+50</b> bira kapağı bonus verir. <b>+1</b> halkası sana fazladan bir dart kazandırır.</dd></div>
         <div><dt>Standart</dt><dd>10 dart, 10 metreden başlarsın. Puan eşiklerini geçtikçe tahta 2 metre uzaklaşır ve çarpan büyür. Toplam puanın rekor olarak saklanır.</dd></div>
-        <div><dt>Challenge</dt><dd>10 level, 10 m'den 28 m'ye. Hedefe ulaşırsan <b>SUCCESS</b>, ulaşamazsan <b>FAIL</b>. Her level 0–3 yıldız; sonrakini açmak için en az 1 yıldız gerekir. Barmen her levelde yeni bir numara öğretir: Level 1 klasik dart, Level 2'de Dev, 3'te Buz, 4'te Ateş, 5'te Altın dart açılır.</dd></div>
+        <div><dt>Meydan Okuma</dt><dd>10 seviye, 10 m'den 28 m'ye. Hedefe ulaşırsan <b>BAŞARILI</b>, ulaşamazsan <b>BAŞARISIZ</b>. Her seviye 0–3 yıldız; sonrakini açmak için en az 1 yıldız gerekir. Barmen her seviyede yeni bir numara öğretir: Seviye 1 klasik dart, Seviye 2'de Dev, 3'te Buz, 4'te Ateş, 5'te Altın dart açılır.</dd></div>
         <div><dt>Klavye</dt><dd><kbd>Boşluk</kbd> durdur / fırlat · <kbd>1</kbd>–<kbd>4</kbd> özellik seç · <kbd>Esc</kbd> mola</dd></div>
       </dl>
       <button class="btn primary" id="btnHelpOk" type="button">Anladım</button>
@@ -423,7 +423,7 @@ kbd{font:700 12px/1 var(--font-ui);padding:2px 6px;border:1px solid var(--wood-4
         <div class="setting"><span><b>Ses efektleri</b><small>Dart sesi, isabet, alkış</small></span><button class="switch" id="swSound" type="button" role="switch" aria-checked="true" aria-label="Ses efektleri"></button></div>
         <div class="setting"><span><b>Bar müziği</b><small>Arka planda hafif blues</small></span><button class="switch" id="swMusic" type="button" role="switch" aria-checked="true" aria-label="Bar müziği"></button></div>
         <div class="setting"><span><b>Titreşim</b><small>Destekleyen telefonlarda</small></span><button class="switch" id="swVibe" type="button" role="switch" aria-checked="true" aria-label="Titreşim"></button></div>
-        <div class="setting"><span><b>İlerlemeyi sıfırla</b><small>Rekor, yıldızlar ve açılan leveller silinir</small></span><button class="btn" id="btnReset" type="button">Sıfırla</button></div>
+        <div class="setting"><span><b>İlerlemeyi sıfırla</b><small>Rekor, yıldızlar ve açılan seviyeler silinir</small></span><button class="btn" id="btnReset" type="button">Sıfırla</button></div>
       </div>
       <div class="confirm" id="resetConfirm" hidden>
         <p>Emin misin? Bu işlem geri alınamaz.</p>
@@ -436,7 +436,7 @@ kbd{font:700 12px/1 var(--font-ui);padding:2px 6px;border:1px solid var(--wood-4
   <!-- Emeği geçenler -->
   <section class="screen scrim" id="scrCredits" hidden role="dialog" aria-modal="true" aria-labelledby="creditsTitle">
     <div class="panel">
-      <div class="panel-head"><h2 id="creditsTitle">Credits</h2><button class="close-btn" id="btnCreditsClose" type="button" aria-label="Kapat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
+      <div class="panel-head"><h2 id="creditsTitle">Yapımcılar</h2><button class="close-btn" id="btnCreditsClose" type="button" aria-label="Kapat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
       <p class="credits-logo" aria-hidden="true">Dart Vader</p>
       <p class="story">Eski, sıcak bir barın köşesinde her akşam aynı sandalyede oturan bir müdavim var. Adını kimse tam bilmez; herkes ona “abi” der. Klasik dart artık ona yetmiyor. Bir gece barmen bir teklifle gelir: tahtaya yeni eklentiler, darta özel güçler. Hedef basit: o geceye kadar kimsenin kıramadığı skoru kırmak.</p>
       <dl class="credit-list">
@@ -1365,7 +1365,7 @@ function startGame(mode, levelIdx) {
   lastCard.classList.remove('dense');
   nextDart(true);
   const intro = lv && levelIdx < LEVEL_INTRO.length ? ' ' + LEVEL_INTRO[levelIdx] : ' Kolay gelsin abi.';
-  barmanSay(mode === 'standard' ? pick(LINES.startStd) : `Level ${levelIdx + 1}: ${lv.d} m, ${lv.darts} dart, hedef ${fmt(lv.target)}.` + intro, 6000);
+  barmanSay(mode === 'standard' ? pick(LINES.startStd) : `Seviye ${levelIdx + 1}: ${lv.d} m, ${lv.darts} dart, hedef ${fmt(lv.target)}.` + intro, 6000);
 }
 
 function nextDart(first) {
@@ -1564,7 +1564,7 @@ function endGame() {
         ? (prev > 0 ? `Rekorla berabere kaldın (${fmt(prev)}). Bir puan daha…` : 'Bu el puan çıkmadı. Tek bir puan bile rekor olur.')
         : `Rekor ${fmt(prev)} · ${fmt(prev - g.score)} puan geride kaldın`;
     talk = success ? 'Bu skoru tebeşirle duvara yazıyorum abi. Kimse kolay kolay geçemez.' : 'Fena değil abi. Rekor için bir el daha?';
-    actions.push(['Tekrar oyna', () => startGame('standard')], ['Challenge', showLevels], ['Ana menü', showMenu]);
+    actions.push(['Tekrar oyna', () => startGame('standard')], ['Meydan Okuma', showLevels], ['Ana menü', showMenu]);
   } else {
     const i = g.level, lv = g.lv;
     stars = starsFor(g.score, lv.target);
@@ -1573,19 +1573,19 @@ function endGame() {
     save.best[i] = Math.max(save.best[i], g.score);
     persist();
     success = stars > 0;
-    eyebrow = `Level ${i + 1} · ${lv.d} m · hedef ${fmt(lv.target)}`;
-    word = success ? 'SUCCESS' : 'FAIL';
+    eyebrow = `Seviye ${i + 1} · ${lv.d} m · hedef ${fmt(lv.target)}`;
+    word = success ? 'BAŞARILI' : 'BAŞARISIZ';
     wordClass = success ? 'success' : 'fail';
     if (stars >= 3) sub = `Üç yıldız! <strong>${fmt(starGoal(lv.target, 3))}</strong> sınırını geçtin.`;
     else if (stars > 0) sub = `Sonraki yıldız için ${fmt(starGoal(lv.target, stars + 1) - g.score)} puan daha.`;
     else sub = `Hedefe ${fmt(lv.target - g.score)} puan kaldı.`;
-    if (prevStars === 0 && stars > 0 && i < 9) sub += ` <strong>Level ${i + 2} açıldı!</strong>`;
-    if (success && i === 9) sub += ' <strong>Bütün levelleri bitirdin!</strong>';
+    if (prevStars === 0 && stars > 0 && i < 9) sub += ` <strong>Seviye ${i + 2} açıldı!</strong>`;
+    if (success && i === 9) sub += ' <strong>Bütün seviyeleri bitirdin!</strong>';
     talk = stars >= 3 ? 'Üç yıldız! Abi sen bu barın efsanesisin.'
       : success ? (i === 9 ? 'Yirmi sekiz metreden bu skor? Bu gece senin gecen abi.' : 'Geçtin abi! Sıradaki tahta biraz daha uzakta.')
       : 'Bu sefer olmadı abi. Bir yudum al, tekrar dene.';
-    if (i < 9 && unlocked(i + 1)) actions.push(['Sonraki level', () => startGame('challenge', i + 1)]);
-    actions.push([success ? 'Tekrar oyna' : 'Tekrar dene', () => startGame('challenge', i)], ['Level seçimi', showLevels]);
+    if (i < 9 && unlocked(i + 1)) actions.push(['Sonraki seviye', () => startGame('challenge', i + 1)]);
+    actions.push([success ? 'Tekrar oyna' : 'Tekrar dene', () => startGame('challenge', i)], ['Seviye seçimi', showLevels]);
     if (actions.length < 3) actions.push(['Ana menü', showMenu]);
   }
 
@@ -1650,7 +1650,7 @@ function updateHud(bump) {
   const scoreEl = $('hudScore');
   scoreEl.textContent = fmt(g.score);
   if (bump) { scoreEl.classList.remove('bump'); void scoreEl.offsetWidth; scoreEl.classList.add('bump'); }
-  $('hudMode').textContent = g.mode === 'standard' ? 'STANDART' : `LEVEL ${g.level + 1}`;
+  $('hudMode').textContent = g.mode === 'standard' ? 'STANDART' : `SEVİYE ${g.level + 1}`;
   $('hudDist').textContent = `${g.distance} m · ${fmx(distMult(g.distance))}`;
   const icons = $('dartIcons');
   if (icons.childElementCount !== g.dartsTotal) icons.innerHTML = DART_ICON.repeat(g.dartsTotal);
@@ -1705,7 +1705,7 @@ function updateFeatures() {
     b.classList.toggle('locked', locked);
     b.disabled = locked || n <= 0 || !can || (iceCommitted && k !== 'ice');
     b.setAttribute('aria-pressed', String(g.feat === k));
-    b.setAttribute('aria-label', locked ? `${FEATURES[k].name}, Level ${featureLevel(k)}'de açılır` : `${FEATURES[k].name}, ${n} hak`);
+    b.setAttribute('aria-label', locked ? `${FEATURES[k].name}, Seviye ${featureLevel(k)}'de açılır` : `${FEATURES[k].name}, ${n} hak`);
   });
 }
 
@@ -1787,9 +1787,9 @@ function renderLevels() {
   $('levelGrid').innerHTML = LEVELS.map((lv, i) => {
     const open = unlocked(i), st = save.stars[i];
     const best = open ? (save.best[i] ? `En iyi ${fmt(save.best[i])}` : 'Henüz oynanmadı') : `${LOCK_SVG} Kilitli`;
-    const label = `Level ${i + 1}, ${lv.d} metre, ${lv.darts} dart, hedef ${fmt(lv.target)} puan, ` + (open ? `${st} yıldız` : 'kilitli');
+    const label = `Seviye ${i + 1}, ${lv.d} metre, ${lv.darts} dart, hedef ${fmt(lv.target)} puan, ` + (open ? `${st} yıldız` : 'kilitli');
     return `<li><button class="lvl${st === 3 ? ' perfect' : ''}" type="button" data-level="${i}"${open ? '' : ' disabled'} aria-label="${label}">
-      <span class="lvl-top"><span class="lvl-no">Level ${i + 1}</span><span class="lvl-dist">${lv.d} m</span></span>
+      <span class="lvl-top"><span class="lvl-no">Seviye ${i + 1}</span><span class="lvl-dist">${lv.d} m</span></span>
       <span class="lvl-meta">${lv.darts} dart · hedef ${fmt(lv.target)}</span>
       ${LEVEL_NEW[i] ? `<span class="lvl-new">${LEVEL_NEW[i]}</span>` : ''}
       <span class="lvl-stars">${starsHtml(st)}</span>
